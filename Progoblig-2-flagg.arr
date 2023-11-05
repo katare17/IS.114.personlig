@@ -76,63 +76,61 @@ Nor-Across-Blue = Nor-Height / 8
 Nor-Up-Blue = Nor-Width / 11
 
 #CROSS PLACEMENTS 
-mid-place = (Fae-Height / 2)
-mid-place-width = (Fae-Width / 2)
 Den-place = (((Den-Width - 40) / 3) + 20)
 Swe-place = (((Swe-Width) / 2.8) + 10)
 
 
 #FAERO ISLANDS
-fun Faero(width):
-  put-image(rectangle(Fae-Up-Red, Fae-Height, "Solid", Fae-Red), (((width - 40) / 3) + 20), mid-place,
-    put-image(rectangle(Fae-Width, Fae-Up-Red, "Solid", Fae-Red), (width / 2), (Fae-Height / 2),
-    put-image(rectangle(Fae-Up-Blue, Fae-Height, "Solid", Fae-Blue), (((width - 40) / 3) + 20), mid-place,
-        put-image(rectangle(Fae-Width, Fae-Across-Blue, "Solid", Fae-Blue), mid-place-width, mid-place,
-          put-image(rectangle(Fae-Width, Fae-Height, "Solid", Nor-White), mid-place-width, mid-place,
-            empty-scene(width,Fae-Height))))))
+fun Faero():
+  put-image(rectangle(Fae-Up-Red, Fae-Height, "Solid", Fae-Red), (((Fae-Width - 40) / 3) + 20), (Fae-Height / 2),
+    put-image(rectangle(Fae-Width, Fae-Up-Red, "Solid", Fae-Red), (Fae-Width / 2), (Fae-Height / 2),
+    put-image(rectangle(Fae-Up-Blue, Fae-Height, "Solid", Fae-Blue), (((Fae-Width - 40) / 3) + 20), (Fae-Height / 2),
+        put-image(rectangle(Fae-Width, Fae-Across-Blue, "Solid", Fae-Blue), (Fae-Width / 2), (Fae-Height / 2),
+          put-image(rectangle(Fae-Width, Fae-Height, "Solid", Nor-White), (Fae-Width / 2), (Fae-Height / 2),
+            empty-scene(Fae-Width,Fae-Height))))))
 end 
 
-
 #ICELAND
-fun Iceland(width):
-  put-image(rectangle(Ice-Up-Red, Ice-Height, "solid", Ice-Red), (((width - 40) / 3) + 20), (Ice-Height / 2),
-    put-image(rectangle(Ice-Width, Ice-Across-Red, "solid", Ice-Red), (width / 2), (Ice-Height / 2),
-      put-image(rectangle(Ice-Up-White, Ice-Height, "solid", Nor-White), (((width - 40) / 3) + 20), (Ice-Height / 2),
-        put-image(rectangle(Ice-Width, Ice-Across-White, "solid", Nor-White), (width / 2), (Ice-Height / 2),
-          put-image(rectangle(Ice-Width, Ice-Height, "solid", Ice-Blue), (width / 2), (Ice-Height / 2),
-            empty-scene(width, Ice-Height))))))
+fun Iceland():
+  put-image(rectangle(Ice-Up-Red, Ice-Height, "solid", Ice-Red), (((Ice-Width - 40) / 3) + 20), (Ice-Height / 2),
+    put-image(rectangle(Ice-Width, Ice-Across-Red, "solid", Ice-Red), (Ice-Width / 2), (Ice-Height / 2),
+      put-image(rectangle(Ice-Up-White, Ice-Height, "solid", Nor-White), (((Ice-Width - 40) / 3) + 20), (Ice-Height / 2),
+        put-image(rectangle(Ice-Width, Ice-Across-White, "solid", Nor-White), (Ice-Width / 2), (Ice-Height / 2),
+          put-image(rectangle(Ice-Width, Ice-Height, "solid", Ice-Blue), (Ice-Width / 2), (Ice-Height / 2),
+            empty-scene(Ice-Width, Ice-Height))))))
 end
 
+
 #NORWAY
-fun Norway(width):
-  put-image(rectangle(Fae-Up-Red, Fae-Height, "Solid", Nor-Blue), (((width - 40) / 3) + 20), mid-place,
-  put-image(rectangle(Fae-Width, Fae-Up-Red, "Solid", Nor-Blue), mid-place-width, (Fae-Height / 2),
-    put-image(rectangle(Fae-Up-Blue, Fae-Height, "Solid", Nor-White), (((width - 40) / 3) + 20), mid-place,
-      put-image(rectangle(Fae-Width, Fae-Across-Blue, "Solid", Nor-White), mid-place-width, mid-place,
-        put-image(rectangle(Fae-Width, Fae-Height, "Solid", Nor-Red), mid-place-width, mid-place,
-          empty-scene(Fae-Width,Fae-Height))))))
+fun Norway():
+  put-image(rectangle(Nor-Up-Blue, Nor-Height, "Solid", Nor-Blue), (((Nor-Width - 40) / 3) + 20), (Nor-Height / 2),
+    put-image(rectangle(Nor-Width, Nor-Up-Blue, "Solid", Nor-Blue), (Nor-Width / 2), (Nor-Height / 2),
+      put-image(rectangle(Nor-Up-Blue, Nor-Height, "Solid", Nor-White), (((Nor-Width - 40) / 3) + 20), (Nor-Height / 2),
+        put-image(rectangle(Nor-Width, Nor-Across-Blue, "Solid", Nor-White), (Nor-Width / 2), (Nor-Height / 2),
+          put-image(rectangle(Nor-Width, Nor-Height, "Solid", Nor-Red), (Nor-Width / 2), (Nor-Height / 2),
+            empty-scene(Nor-Width,Nor-Height))))))
 end 
 
 #DENMARK
-fun Denmark(width):
-  put-image(rectangle(width, Den-Up-White, "solid", Nor-White), (Den-Width / 2), (Den-Height / 2),
+fun Denmark():
+  put-image(rectangle(Den-Width, Den-Up-White, "solid", Nor-White), (Den-Width / 2), (Den-Height / 2),
     put-image(rectangle(Den-Across-White, Den-Height, "solid", Nor-White), Den-place, (Den-Height / 2), 
-      put-image(rectangle(width, Den-Height, "solid", Den-Red), (Den-Width / 2), (Den-Height / 2), 
-        empty-scene(width, Den-Height))))
+      put-image(rectangle(Den-Width, Den-Height, "solid", Den-Red), (Den-Width / 2), (Den-Height / 2), 
+        empty-scene(Den-Width, Den-Height))))
 end 
 
 
 #FINLAND
-fun Finland(width):
-  put-image(rectangle(width, Fin-Up-Blue, "solid", Fin-Blue), (width / 2), (Fin-Height / 2),
-    put-image(rectangle(Fin-Across-Blue, Fin-Height, "solid", Fin-Blue), (((width - 40) / 3) + 20), (Fin-Height / 2),
-    put-image(rectangle(width, Fin-Height, "solid", Nor-White), (width / 2), (Fin-Height / 2),
-        empty-scene(width, Fin-Height))))
+fun Finland():
+  put-image(rectangle(Fin-Width, Fin-Up-Blue, "solid", Fin-Blue), (Fin-Width / 2), (Fin-Height / 2),
+    put-image(rectangle(Fin-Across-Blue, Fin-Height, "solid", Fin-Blue), (((Fin-Width - 40) / 3) + 20), (Fin-Height / 2),
+      put-image(rectangle(Fin-Width, Fin-Height, "solid", Nor-White), (Fin-Width / 2), (Fin-Height / 2),
+        empty-scene(Fin-Width, Fin-Height))))
 end
 
 
 #SWEDEN
-  fun Sweden(width):
+  fun Sweden():
   put-image(rectangle(Swe-Up-Yellow, Swe-Height, "solid", Swe-Yellow), Swe-place, (Swe-Height / 2), 
     put-image(rectangle(Swe-Width, Swe-Across-Yellow, "solid", Swe-Yellow), (Swe-Width / 2), (Swe-Height / 2),
       put-image(rectangle(Swe-Width, Swe-Height, "solid", Swe-Blue), (Swe-Width / 2), (Swe-Height / 2), 
@@ -155,22 +153,22 @@ Land
 #ACTUAL FUNCTION
 fun draw-flag(country):
   if country == 1:
-    Faero(Fae-Width)
+    Faero()
     
   else if country == 2:
-    Iceland(Ice-Width)
+    Iceland()
     
   else if country == 3:
-    Denmark(Den-Width)
+    Denmark()
     
   else if country == 4:
-    Finland(Fin-Width)    
+    Finland()    
     
   else if country == 5:
-    Norway(Nor-Width)
+    Norway()
     
   else if country == 6:
-    Sweden(Swe-Width)
+    Sweden()
         else: 
     "You need to enter a valid country number"
 end 

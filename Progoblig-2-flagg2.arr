@@ -12,8 +12,6 @@ fae-blue = color(0, 94, 185, 1)
 fae-red = color(239,48,62,1)
 fin-blue = color(0, 47, 108, 1)
 
-# Definerer flaggene
-
 #Tabell
 my-table = table: Country :: String, Width :: Number, Height :: Number, Background-color :: String, First-Cross-Color :: String, Second-Cross-Color :: String
   row: "Norway", 220, 160, "nor-red", "white", "nor-blue"
@@ -29,8 +27,6 @@ end
 
 
 #funksjon for å tegne
-
-
 fun draw-flag(width, height, background, crosscolor, cross2color):
   if width < 300:
     put-image(rotate(90, rectangle(height, 20, "solid", cross2color)), (((width - 40) / 3) + 20), (height / 2), 
@@ -65,6 +61,7 @@ fun draw-flag(width, height, background, crosscolor, cross2color):
   end 
 end
 
+#Instruksjoner 
 Instructions = table: How-to :: String
   row: "Do you want to see a nordic flag?"
   row: "Just write draw-flag()"

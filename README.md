@@ -13,4 +13,3 @@ Jeg har to flaggoppgaver til oblig 2, da jeg har skrevet to forskjellige koder.
 |Progoblig 01       |23.10.2023 |
 |Progoblig 02       |06.11.2023 |
 |Progoblig 03       |22.11.2023 |
-|-------------------|-----------|

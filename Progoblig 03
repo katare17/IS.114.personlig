@@ -1,0 +1,11 @@
+include color
+
+my-grey = color(36, 37, 38, 1)
+
+put-image(rotate(65, rectangle(3, 60, "solid", "white")), 210, 380,
+  put-image(rotate(65, rectangle(3, 60, "solid", "white")), 200, 400,
+    put-image(rotate(43, rectangle(30, 150, "solid", "white")), 330, 135,
+      put-image(circle(150, "outline", "white"), 175, 300,
+        put-image(circle(144, "outline", "white"), 175, 300,
+          put-image(square(600, "solid", my-grey), 250, 250,
+            empty-scene(450, 470)))))))
